@@ -1,150 +1,131 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muhandislik maktabi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhandislik Maktabi</title>
+<style>
+  :root {
+    --blue: #1E40AF;
+    --blue-light: #2563EB;
+    --bg: #F8FAFC;
+    --card-bg: #FFFFFF;
+    --text: #1E293B;
+    --text-soft: #475569;
+    --border: #E2E8F0;
+    --gradient: linear-gradient(90deg, #7C3AED, #2563EB, #06B6D4);
+  }
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-    }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
 
-    body {
-      background: #0f0f0f;
-      color: white;
-    }
+  .hero {
+    background: var(--gradient);
+    height: 90px;
+  }
 
-    /* HERO */
-    .hero {
-      height: 100vh;
-      background: linear-gradient(120deg, #ff7a00, #111);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-    }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
 
-    .hero h1 {
-      font-size: 48px;
-      font-weight: 800;
-    }
+  section {
+    margin-bottom: 50px;
+  }
 
-    .hero p {
-      margin-top: 15px;
-      font-size: 18px;
-      opacity: 0.9;
-    }
+  h2 {
+    color: var(--blue);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
 
-    .btn {
-      margin-top: 25px;
-      padding: 12px 25px;
-      background: black;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+  p.lead {
+    color: var(--text-soft);
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 720px;
+  }
 
-    .btn:hover {
-      background: white;
-      color: black;
-    }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
 
-    /* SECTIONS */
-    .section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    box-shadow: 0 2px 8px rgba(30, 64, 175, 0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+    flex: 1 1 240px;
+  }
 
-    .title {
-      font-size: 28px;
-      margin-bottom: 20px;
-      color: #ff7a00;
-    }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(30, 64, 175, 0.12);
+  }
 
-    /* CARDS */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+  .icon {
+    font-size: 22px;
+  }
 
-    .card {
-      background: #1c1c1c;
-      padding: 20px;
-      border-radius: 15px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      background: #2a2a2a;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #000;
-      margin-top: 40px;
-      font-size: 14px;
-    }
-  </style>
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--text-soft);
+    font-size: 14px;
+    border-top: 1px solid var(--border);
+  }
+</style>
 </head>
-
 <body>
 
-  <!-- HERO -->
-  <div class="hero">
-    <div>
-      <h1>Muhandislik maktabi</h1>
-      <p>Robototexnika • Arduino • 3D Modeling • Dronlar</p>
-      <button class="btn">Kurslarga yozilish</button>
-    </div>
-  </div>
+  <div class="hero"></div>
 
-  <!-- ABOUT -->
-  <div class="section">
-    <div class="title">Biz haqimizda</div>
-    <p>
-      Biz yoshlarni zamonaviy texnologiyalar: robototexnika, elektronika va muhandislik yo‘nalishlariga tayyorlaymiz.
-    </p>
-  </div>
+  <div class="container">
 
-  <!-- COURSES -->
-  <div class="section">
-    <div class="title">Kurslar</div>
+    <section>
+      <h2>Biz haqimizda</h2>
+      <p class="lead">Biz yoshlarni zamonaviy texnologiyalar: robototexnika, elektronika va muhandislik yo'nalishlariga tayyorlaymiz.</p>
+    </section>
 
-    <div class="grid">
-      <div class="card">🤖 Robototexnika</div>
-      <div class="card">🔌 Arduino / ESP32</div>
-      <div class="card">🖨 3D Modeling & Printing</div>
-      <div class="card">🚁 Dron Texnologiyalari</div>
-    </div>
-  </div>
+    <section>
+      <h2>Kurslar</h2>
+      <div class="cards">
+        <div class="card"><span class="icon">🤖</span> Robototexnika</div>
+        <div class="card"><span class="icon">🖨️</span> 3D Modeling & Printing</div>
+        <div class="card"><span class="icon">🚁</span> Dron FPV</div>
+      </div>
+    </section>
 
-  <!-- CONTACT -->
-  <div class="section">
-    <div class="title">Aloqa</div>
+    <section>
+      <h2>Aloqa</h2>
+      <div class="cards">
+        <div class="card"><span class="icon">📍</span> Jizzax shahar</div>
+        <div class="card"><span class="icon">📱</span> Telegram: @XolmurodovBa</div>
+        <div class="card"><span class="icon">🎓</span> Muhandislik maktabi</div>
+      </div>
+    </section>
 
-    <div class="grid">
-      <div class="card">📍 Jizzax shahar</div>
-      <div class="card">📱 Telegram: @XolmurodovBa</div>
-      <div class="card">🎓 Muhandislik maktabi</div>
-    </div>
   </div>
 
   <footer>
-    © 2026 Muhandislik maktabi | Barcha huquqlar himoyalangan
+    © 2026 Muhandislik Maktabi. Barcha huquqlar himoyalangan.
   </footer>
 
 </body>
